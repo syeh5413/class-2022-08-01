@@ -6,8 +6,15 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(primer.data)
+knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
+```
+
+```{r}
+ec <- read_rds("ec.rds")
+```
+
+```{r}
+summary(ec)
 ```
 
