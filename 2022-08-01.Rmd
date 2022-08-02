@@ -12,9 +12,13 @@ library(tidyverse)
 
 ```{r}
 ec <- read_rds("ec.rds")
+ec |>
+  select(county_name, pop2018)
 ```
 
 ```{r}
-summary(ec)
+ec |>
+  ggplot(aes(x = pop2018, fill = county_name)) +
+  geom_histogram()
 ```
 
